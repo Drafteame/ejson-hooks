@@ -70,7 +70,7 @@ jobs:
           ref: "main"
 
       - name: Release
-        uses: softprops/action-gh-release@v1.1.0
+        uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           tag_name: ${{ needs.bump_version.outputs.version }}
