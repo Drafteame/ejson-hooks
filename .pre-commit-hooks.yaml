@@ -1,0 +1,13 @@
+- id: encrypt
+  name: 'ejson encrypt'
+  entry: run-encrypt.sh
+  files: '\.ejson$'
+  language: script
+  description: 'Execute ejson encrypt over the modified files'
+
+- id: decrypt
+  name: 'ejson decrypt'
+  entry: run-decrypt.sh
+  files: '\.ejson$'
+  language: script
+  description: 'Execute ejson decrypt over the modified files'
