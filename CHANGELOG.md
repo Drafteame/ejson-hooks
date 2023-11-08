@@ -1,3 +1,8 @@
+## v0.0.3 (2023-11-08)
+
+
+- chore: upgrade pre-commit hooks for the repo checks (#4)
+
 ## v0.0.2 (2023-11-08)
 
 
