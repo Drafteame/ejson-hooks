@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Define the ejson command
-EJSON_CMD="ejson"
-
 # Get the list of modified and added files
 FILES=$(git diff --cached --name-status | awk '$1 == "M" || $1 == "A" { print $2 }')
 
@@ -10,9 +7,9 @@ FILES=$(git diff --cached --name-status | awk '$1 == "M" || $1 == "A" { print $2
 for FILE in $FILES; do
   if [ "${FILE##*.}" = "ejson" ]; then
     # Encrypt the ejson file
-    $EJSON_CMD decrypt "$FILE"
+    ejson decrypt $FILE
     # Stage the decrypted file
-    git add "$FILE"
+    git add $FILE
   fi
 done
 
